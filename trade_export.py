@@ -73,15 +73,14 @@ def export(conn):
                     where_clause.append(f"transaction_time <= {value}")
             else:
                 where_clause.append(f"{key} = {value}")
-    # if no export parameters are set, we don't want to search for all trades
-    if len(where_clause) == 0:
-        print("No search parameters set.")
-        return
+    
     where_clause = " AND ".join(where_clause)
+    if where_clause != '':
+        where_clause = f"WHERE {where_clause}"
     # perform search to find matching trades
-    trades = pd.read_sql(f"SELECT * FROM trades WHERE {where_clause}", conn)
+    trades = pd.read_sql(f"SELECT * FROM trades {where_clause}", conn)
     # ask user on csv name to export
-    csv_name = input("Please enter csv name to export: ")
+    csv_name = input("Please enter csv name to export (trades): ")
     if csv_name == '':
         csv_name = 'trades.csv'
     else:
@@ -92,7 +91,7 @@ def export(conn):
     trades.to_csv(csv_name, index=False)
 
 def back():
-    print("Going back to query menu...")
+    print("Going back to main homepage menu...")
     return True
 
 export_trade_menu_options = {
