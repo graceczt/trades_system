@@ -98,8 +98,8 @@ def export(conn):
         csv_name = f"{csv_name}.csv"
     # export trades to excel file
     print(f"Exporting {len(trades)} trades to {csv_name}...")
-
     trades.to_csv(csv_name, index=False)
+    print(f"Export to {csv_name} successfully completed.")
 
 def back():
     print("Going back to main homepage menu...")
@@ -123,7 +123,7 @@ def export_trade_menu():
     print(f"Export parameters: {[i for i in trade_export_parameters.items() if i[1] is not None]}")
 
     #print("1) Set Broker id\n2) Set share id\n3) Set daterange\n4) Export\n5) Back")
-    export_trade_choice = input("Please enter an option (1 to 6) in Export Trade Menu: ")
+    export_trade_choice = input("Please enter an option (1 to 6) in Export Trade Menu (export all data (Enter '5') or selected Export Parameters allowed): ")
     if not export_trade_choice.isdigit() or int(export_trade_choice) < 1 or int(export_trade_choice) > 6:
         print("Please enter your search trade choice 1 to 6 only.")
         return export_trade_menu()
