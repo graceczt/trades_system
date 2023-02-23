@@ -6,10 +6,7 @@ import numpy as np
 import seaborn as sns
 
 from db import db # set-up sqlite database
-from trade_sys import get_menu_option # to homepage menu
 from trade_search import proceed_search_trade_menu # based on query menu option 1 and sub menu option 4
-
-
 
 
 ############################# query menu #########################################################
@@ -53,7 +50,7 @@ def trade_details(conn):
 
 def exit_query():
     print("Going to homepage menu.")
-    return get_menu_option()
+    return True
 
 # using dispatch map dictionary on query option
 query_option = {

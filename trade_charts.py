@@ -143,4 +143,4 @@ def proceed_chart_menu():
         if exit:
             break   
 
-proceed_chart_menu()
+
