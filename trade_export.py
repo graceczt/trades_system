@@ -3,6 +3,17 @@ import pandas as pd
 
 from db import db
 
+
+# Phase 3
+
+# Export trades to excel (specifying zero or more of the following: share_id, broker_id, date_range) - > filters 
+# Menu2
+# 1.	Fetch Trades by Share_id
+# 2.	Fetch Trades by Broker_id
+# 3.	Fetch Trades by date_range
+# 4.	Return to Main menu
+
+####################### export trade menu #####################################################
 trade_export_parameters = {
     'broker_id': None,
     'share_id': None,

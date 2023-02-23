@@ -3,6 +3,22 @@ import pandas as pd
 
 from db import db
 
+# Phase 2
+
+# Implement a “query” sub menu with the following options:
+
+# 1)	List Brokers         #at trade_query.py
+
+# 2)	List all Shares (should include company name)      # at trade_query.py
+
+# 3)	Lookup trade by trade id (shows all trade details) # at trade_query.py
+
+# 4)	Search for trade (specifying one or more of the following: share_id, broker_id, date_range)
+
+# 5)	Return to main menu # at trade_query.py
+
+############################# query option 4 menu #########################################################
+
 trade_search_parameters = {
     'broker_id': None,
     'share_id': None,

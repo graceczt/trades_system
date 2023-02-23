@@ -8,7 +8,18 @@ import seaborn as sns
 from db import db # set-up sqlite database
 from trade_search import proceed_search_trade_menu # based on query menu option 1 and sub menu option 4
 
+# Phase 2
+# Implement a “query” sub menu with the following options:
 
+# 1)	List Brokers
+
+# 2)	List all Shares (should include company name)
+
+# 3)	Lookup trade by trade id (shows all trade details)
+
+# 4)	Search for trade (specifying one or more of the following: share_id, broker_id, date_range)
+
+# 5)	Return to main menu
 ############################# query menu #########################################################
 @db
 def list_brokers(conn):

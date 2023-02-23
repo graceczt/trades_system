@@ -5,6 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
+# Phase 4
 # Implement a “reporting” sub menu which helps to plot charts with the following options:
 
 
@@ -15,6 +16,8 @@ import numpy as np
 # 3)	Proportion of trades traded on each exchange (pie chart)
 
 # 4)	Return to main menu
+
+###################### reporting charts menu #####################################################
 @db
 def trades_per_broker(conn):
     print("showing trades per broker histogram...")
