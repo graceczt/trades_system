@@ -91,3 +91,4 @@ def proceed_query_menu():
         exit = query_option[query_choice][1]() 
         if exit:
             break
+
